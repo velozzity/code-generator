@@ -1,0 +1,15 @@
+{
+  "name": "@velozzity/code-generator",
+  "version": "0.1.0",
+  "description": "A Template Package For File Generation",
+  "main": "bin/index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "thedarkkid.codes@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
