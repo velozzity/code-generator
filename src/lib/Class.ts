@@ -1,7 +1,7 @@
-import Entity from './Entity';
+import { BlockEntity } from './Entity';
 import Writer, { WriterFunction } from './Writer';
 
-export class Class extends Entity {
+export class Class extends BlockEntity {
   protected name: string;
   protected content: Writer;
 
@@ -29,6 +29,6 @@ export class Class extends Entity {
   }
 
   static create (name: string, writeFn: WriterFunction): Class {
-    return Entity._create<Class>(Class, name, writeFn);
+    return BlockEntity._create<Class>(Class, name, writeFn);
   }
 }

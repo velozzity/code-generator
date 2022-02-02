@@ -9,12 +9,6 @@ export default abstract class Entity {
     this.content = new Writer();
   }
 
-  protected abstract writeStart (name: string);
-
-  protected abstract writeEnd ();
-
-  protected abstract writeContent (write: WriterFunction);
-
   abstract write (write: WriterFunction);
 
   static _create<T extends Entity> (eConstructor: new (name: string) => T, name: string, writerFn: WriterFunction): T {
@@ -26,4 +20,12 @@ export default abstract class Entity {
   toString () {
     return this.content.print();
   }
+}
+
+export abstract class BlockEntity extends Entity {
+  protected abstract writeStart (name: string);
+
+  protected abstract writeEnd ();
+
+  protected abstract writeContent (write: WriterFunction);
 }
