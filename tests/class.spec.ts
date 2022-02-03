@@ -1,11 +1,11 @@
 import { Class } from '../src/lib/Class';
 import Writer from '../src/lib/Writer';
-import { randomHexString } from '@velozzity/ts-helpers/dist/Utility';
+import { Utility } from '@velozzity/ts-helpers';
 
 describe('Class Tests', () => {
 
   test('new class object can be used to generate class', () => {
-    const name = randomHexString(5) as string;
+    const name = Utility.randomHexString(5) as string;
     const class_ = new Class(name);
     class_.write((content: Writer) => {
       content.add('// class comment');
@@ -16,8 +16,8 @@ describe('Class Tests', () => {
   });
 
   test('class.create can be used to generate class', () => {
-    const testText = randomHexString(25) as string;
-    const name = randomHexString(5) as string;
+    const testText = Utility.randomHexString(25) as string;
+    const name = Utility.randomHexString(5) as string;
     const class_ = Class.create(name, (content) => {
       content.add(testText);
     });

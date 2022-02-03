@@ -19,6 +19,6 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@velozzity/ts-helpers": "0.0.2"
+    "@velozzity/ts-helpers": "0.0.3"
   }
 }

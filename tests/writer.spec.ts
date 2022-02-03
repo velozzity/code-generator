@@ -1,12 +1,12 @@
 import Writer from '../bin/lib/Writer';
 import { Class } from '../bin/lib/Class';
-import { randomHexString } from '@velozzity/ts-helpers/dist/Utility';
+import { Utility } from '@velozzity/ts-helpers';
 
 describe('Writer Tests', ()=>{
 
   test('writer can be updated by entity', () => {
     const wr = new Writer();
-    const testText = randomHexString(25) as string;
+    const testText = Utility.randomHexString(25) as string;
     wr.add(Class.create('Test', (class_)=>{
       class_.add(testText);
     }))
@@ -18,7 +18,7 @@ describe('Writer Tests', ()=>{
 
   test('writer can be updated by string', () => {
     const wr = new Writer();
-    const testText = randomHexString(25) as string;
+    const testText = Utility.randomHexString(25) as string;
     wr.add(testText);
     expect(wr.toString()).toBeTruthy();
     expect(wr.toString()).toContain(testText);
@@ -26,7 +26,7 @@ describe('Writer Tests', ()=>{
 
   test('writer can be cleared', () => {
     const wr = new Writer();
-    const testText = randomHexString(25) as string;
+    const testText = Utility.randomHexString(25) as string;
     wr.add(testText);
     expect(wr.toString()).toBeTruthy();
     expect(wr.toString()).toContain(testText);
