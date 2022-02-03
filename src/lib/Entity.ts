@@ -18,7 +18,7 @@ export default abstract class Entity {
   };
 
   toString () {
-    return this.content.print();
+    return this.content.toString();
   }
 }
 

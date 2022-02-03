@@ -18,7 +18,7 @@ export default class Writer {
 
   clear = () => this.content = '';
 
-  print () {
+  public toString () {
     return this.content;
   }
 }

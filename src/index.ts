@@ -11,6 +11,5 @@ import Writer from './lib/Writer';
 // })
 // console.log(fn.toString());
 
-// Todo: write tests;
 // Todo: figure out a way to do class Exports;
 // Todo: Differentiate between a class/File
